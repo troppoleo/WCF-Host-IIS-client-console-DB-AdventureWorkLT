@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SrvData" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:57844/ExposedService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:57844/ExposedService.svc?xsd=xsd1" namespace="http://microsoft.com/wsdl/types/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISrvData_GetPeople_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPeople" />
+  </wsdl:message>
+  <wsdl:message name="ISrvData_GetPeople_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPeopleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISrvData_addPersona_InputMessage">
+    <wsdl:part name="parameters" element="tns:addPersona" />
+  </wsdl:message>
+  <wsdl:message name="ISrvData_addPersona_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addPersonaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISrvData_addPersona2_InputMessage">
+    <wsdl:part name="parameters" element="tns:addPersona2" />
+  </wsdl:message>
+  <wsdl:message name="ISrvData_addPersona2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addPersona2Response" />
+  </wsdl:message>
+  <wsdl:message name="ISrvData_GetFirstProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFirstProduct" />
+  </wsdl:message>
+  <wsdl:message name="ISrvData_GetFirstProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFirstProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISrvData_GetFirstCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFirstCustomer" />
+  </wsdl:message>
+  <wsdl:message name="ISrvData_GetFirstCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFirstCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISrvData_GetAllCustomers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCustomers" />
+  </wsdl:message>
+  <wsdl:message name="ISrvData_GetAllCustomers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCustomersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISrvData_GetOneFirstName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOneFirstName" />
+  </wsdl:message>
+  <wsdl:message name="ISrvData_GetOneFirstName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOneFirstNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISrvData_GetCustomerFirstNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerFirstNames" />
+  </wsdl:message>
+  <wsdl:message name="ISrvData_GetCustomerFirstNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerFirstNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISrvData_GetEcho_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEcho" />
+  </wsdl:message>
+  <wsdl:message name="ISrvData_GetEcho_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEchoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISrvData_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="ISrvData_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISrvData_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="ISrvData_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISrvData">
+    <wsdl:operation name="GetPeople">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvData/GetPeople" message="tns:ISrvData_GetPeople_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvData/GetPeopleResponse" message="tns:ISrvData_GetPeople_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addPersona">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvData/addPersona" message="tns:ISrvData_addPersona_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvData/addPersonaResponse" message="tns:ISrvData_addPersona_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addPersona2">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvData/addPersona2" message="tns:ISrvData_addPersona2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvData/addPersona2Response" message="tns:ISrvData_addPersona2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFirstProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvData/GetFirstProduct" message="tns:ISrvData_GetFirstProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvData/GetFirstProductResponse" message="tns:ISrvData_GetFirstProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFirstCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvData/GetFirstCustomer" message="tns:ISrvData_GetFirstCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvData/GetFirstCustomerResponse" message="tns:ISrvData_GetFirstCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCustomers">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvData/GetAllCustomers" message="tns:ISrvData_GetAllCustomers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvData/GetAllCustomersResponse" message="tns:ISrvData_GetAllCustomers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOneFirstName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvData/GetOneFirstName" message="tns:ISrvData_GetOneFirstName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvData/GetOneFirstNameResponse" message="tns:ISrvData_GetOneFirstName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerFirstNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvData/GetCustomerFirstNames" message="tns:ISrvData_GetCustomerFirstNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvData/GetCustomerFirstNamesResponse" message="tns:ISrvData_GetCustomerFirstNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEcho">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvData/GetEcho" message="tns:ISrvData_GetEcho_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvData/GetEchoResponse" message="tns:ISrvData_GetEcho_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvData/GetData" message="tns:ISrvData_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvData/GetDataResponse" message="tns:ISrvData_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISrvData/GetDataUsingDataContract" message="tns:ISrvData_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISrvData/GetDataUsingDataContractResponse" message="tns:ISrvData_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISrvData" type="tns:ISrvData">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPeople">
+      <soap:operation soapAction="http://tempuri.org/ISrvData/GetPeople" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addPersona">
+      <soap:operation soapAction="http://tempuri.org/ISrvData/addPersona" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addPersona2">
+      <soap:operation soapAction="http://tempuri.org/ISrvData/addPersona2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFirstProduct">
+      <soap:operation soapAction="http://tempuri.org/ISrvData/GetFirstProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFirstCustomer">
+      <soap:operation soapAction="http://tempuri.org/ISrvData/GetFirstCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCustomers">
+      <soap:operation soapAction="http://tempuri.org/ISrvData/GetAllCustomers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOneFirstName">
+      <soap:operation soapAction="http://tempuri.org/ISrvData/GetOneFirstName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerFirstNames">
+      <soap:operation soapAction="http://tempuri.org/ISrvData/GetCustomerFirstNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEcho">
+      <soap:operation soapAction="http://tempuri.org/ISrvData/GetEcho" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/ISrvData/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/ISrvData/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SrvData">
+    <wsdl:port name="BasicHttpBinding_ISrvData" binding="tns:BasicHttpBinding_ISrvData">
+      <soap:address location="http://localhost:57844/ExposedService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

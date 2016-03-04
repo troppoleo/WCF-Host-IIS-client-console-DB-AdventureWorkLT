@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:57844/ExposedService.svc?xsd=xsd1" namespace="http://microsoft.com/wsdl/types/" />
+  <xs:element name="GetPeople">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="GetPeopleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetPeopleResult" type="tns:ArrayOfPersone" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfPersone">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Persone" nillable="true" type="tns:Persone" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Persone">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="surname" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="addPersona">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="p" type="tns:Persone" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addPersonaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="addPersonaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addPersona2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="p" type="tns:Persone" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addPersona2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="addPersona2Result" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFirstProduct">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="GetFirstProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetFirstProductResult" type="tns:clsProduct" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="clsProduct">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="ProductID" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ProductNumber" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Color" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="StandardCost" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ListPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Size" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Weight" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ProductCategoryID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ProductModelID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SellStartDate" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SellEndDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DiscontinuedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ThumbNailPhoto" type="xs:base64Binary" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ThumbnailPhotoFileName" type="xs:string" />
+      <xs:element xmlns:q1="http://microsoft.com/wsdl/types/" minOccurs="1" maxOccurs="1" name="rowguid" type="q1:guid" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ModifiedDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetFirstCustomer">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="GetFirstCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetFirstCustomerResult" type="tns:clsCustomer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="clsCustomer">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="CustomerID" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="NameStyle" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Title" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="FirstName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="MiddleName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="LastName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Suffix" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CompanyName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SalesPerson" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Phone" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetAllCustomers">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="GetAllCustomersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetAllCustomersResult" type="tns:ArrayOfClsCustomer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfClsCustomer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="clsCustomer" nillable="true" type="tns:clsCustomer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetOneFirstName">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="GetOneFirstNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetOneFirstNameResult" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerFirstNames">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="GetCustomerFirstNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetCustomerFirstNamesResult" type="tns:ArrayOfString" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfString">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetEcho">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="pWord" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEchoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetEchoResult" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="value" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetDataResult" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataUsingDataContract">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="composite" type="tns:CompositeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CompositeType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="BoolValue" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="StringValue" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetDataUsingDataContractResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetDataUsingDataContractResult" type="tns:CompositeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

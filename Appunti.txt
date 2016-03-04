@@ -1,0 +1,48 @@
+nel wcf library volevo esporre una classe:
+non si può esporre direttamente le classi dell'EF o cmq non è consigliato quindi si crea una classe con le 
+stesse informazioni che voglio esporre:
+[DataContract]
+    public class clsCustomer
+quando ho aggiornato la web reference del cliente ha preso anche questa classe, cosa che non ha fatto con le
+classi di EF
+nota:
+in un primo momento non ho esposta la classe come [DataContrac] ma ha funzionato cmq
+
+ho tratto ispirazione per questa soluzione da:
+http://www.codeproject.com/Articles/127395/Implementing-a-WCF-Service-with-Entity-Framework
+
+------------------------------------------------------
+
+quando si lavora con WCF usare VS in modalità amministratore altrimenti i client con 
+"wcf test client" integrato in VS non funziona, poi ci sono problemi con la pubblicazioni in IIS
+
+--------------------------------------------------
+
+C:\Users\Administrator\Copy\Copy\WCF\test\ser\WcfServiceLibrary1\WcfServiceLibrary1.sln
+
+Data Source=(localdb)\Projects;Initial Catalog=AdventureWorksLT;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False
+
+servizio wcf che fornisce i dati
+	EF con DB first
+		> Service library
+		> 
+client windows app
+	windows autentication
+	letture e scritture
+applicazione web MVC
+	Single Page Application
+
+	
+-------------------------------------------------------------------------
+all'istanza di sql express mi ci sono collato tramite 
+	(localdb)\Projects
+<add name="AdventureWorksLTEntities" 
+connectionString="metadata=res://*/AdwAdoModel.csdl|res://*/AdwAdoModel.ssdl|res://*/AdwAdoModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=(localdb)\Projects;initial catalog=AdventureWorksLT;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" 
+providerName="System.Data.EntityClient" />	
+-------------------------------------------------------------------------
+
+
+idea da sviluppare:
+creare il data contract in una dll a parte in modo da poterla condividere tra wcf e client
+
+-----------------------------------------------------------

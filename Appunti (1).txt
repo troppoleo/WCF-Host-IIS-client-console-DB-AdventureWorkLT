@@ -1,0 +1,24 @@
+C:\Users\Administrator\Copy\Copy\WCF\test\ser\WcfServiceLibrary1\WcfServiceLibrary1.sln
+
+Data Source=(localdb)\Projects;Initial Catalog=AdventureWorksLT;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False
+
+servizio wcf che fornisce i dati
+	EF con DB first
+		> Service library
+		> 
+client windows app
+	windows autentication
+	letture e scritture
+applicazione web MVC
+	Single Page Application
+
+	
+-------------------------------------------------------------------------
+all'istanza di sql express mi ci sono collato tramite 
+	(localdb)\Projects
+<add name="AdventureWorksLTEntities" 
+connectionString="metadata=res://*/AdwAdoModel.csdl|res://*/AdwAdoModel.ssdl|res://*/AdwAdoModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=(localdb)\Projects;initial catalog=AdventureWorksLT;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" 
+providerName="System.Data.EntityClient" />	
+-------------------------------------------------------------------------
+
+
